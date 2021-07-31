@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Google</title>
+</head>
+  <body>
+    <header>
+      <nav>
+        <div>
+                <a href="#">About</a>
+                <a href="#">Store</a>
+        </div>
+        <div>
+          <a href="#">Gmail</a>
+          <a href="#">Images</a>
+          <a href="#"><div onclick="myMenu()" class="menu gsprite"></div></a>
+          <a href="#" id="login"><div onclick="myMenu()" class="profilee" ></div></a>
+          </div>
+     </nav>
+     <div id="popup" class="popup" style="display:none;">
+       <a href="#">
+         <div class="first sprite"></div>
+         <div class="icon_text">Tribute</div>
+       </a>
+       <a href="#">
+                <div class="second sprite"></div>
+                <div class="icon_text">Form</div>
+            </a>
+       <a href="#">
+                <div class="third sprite"></div>
+                <div class="icon_text">Landing</div>
+            </a>
+            <a href="#">
+                <div class="fourth sprite"></div>
+                <div class="icon_text">Documentation</div>
+            </a>
+            <a href="#">
+                <div class="fifth sprite"></div>
+                <div class="icon_text">Portfolio</div>
+            </a>
+       </div>
+
+       <div id="popup1" class="popup1" style="display:none;">
+         <div class="profiles">
+           <img src="img/profile.jpg" alt="profile" class="profile2">
+           <p class="name">Sudhanshu Ranjan</p>
+             <p class="emailId">sudhanshuranjan2k18@gmail.com</p>
+             <a><div id="manage">Manage your Google Account</div></a>
+       </div>
+       <div class="newacc">
+         <a href="#">
+                  <div class="add gsprite"></div>
+                  <div class="icon_text1">Add another account</div>
+              </a>
+         </div>
+         <br />
+         <div class="signoutt">
+           <a><div id="signout">Sign out of all Accounts</div></a>
+           </div>
+           <br />
+           <div>
+             <a href="#">Privacy Policy</a>
+             <a href="#">Terms of Service</a>
+         </div>
+         </div>
+</header>
+<main>
+  <div>
+    <img src="img/google.svg" alt="Google Logo">
+    </div>
+    <form>
+      <div class="search_icon gsprite"></div>
+      <input type="text" name="search" id="search" />
+      <div class="buttons">
+                    <a><div id="gsearch">Google Search</div></a>
+                    <a><div id="lucky">I'm Feeling Lucky</div></a>
+                </div>
+
+    </form>
+  </main>
+  <div onclick="darkMode()">
+        <span class="switch gsprite"></span>
+    </div>
+    <footer>
+            <nav>
+                <div>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search works</a>
+                </div>
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Settings</a>
+                </div>
+            </nav>
+        </footer>
+        <script>
+          function myMenu(){
+            var x = document.getElementById("popup");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+          }
+
+
+
+          function darkMode(){
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+  </body>
+</html>
